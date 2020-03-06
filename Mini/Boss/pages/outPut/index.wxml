@@ -1,0 +1,47 @@
+<view class="form">
+  <form bindsubmit="bindSave">
+    <view class="title">信息填写</view>
+    <view class="input">
+      <view>报工时间</view>
+      <view class="input right">
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+          {{date}}
+        </picker>
+      </view>
+    </view>
+    <view class="input">
+      <view>报工人员（多选）</view>
+      <input name='comName' type="text" placeholder="报工人员" placeholder-class="placeholder" />
+    </view>
+    <view class="input">
+      <view>选择缸号</view>
+      <input name='ganghao' type="text" placeholder="选择缸号" placeholder-class="placeholder" bindchange="getGangInfo"/>
+    </view>
+    <view class="input">
+      <view>逻辑缸号</view>
+      <input name='consumption' value="" type="text" placeholder="逻辑缸号" placeholder-class="placeholder" />
+    </view>
+    <view class="input">
+      <view>纱织规格</view>
+      <input name='amount' type="digit" placeholder="纱织规格" placeholder-class="placeholder" />
+    </view>
+    <view class="input">
+      <view>颜色</view>
+      <input name='address' type="text" placeholder="颜色" placeholder-class="placeholder" />
+    </view>
+    <view class="input">
+      <view>染色类型</view>
+      <input name='bank' type="text" placeholder="染色类型" placeholder-class="placeholder" />
+    </view>
+    <view class="input">
+      <view>选择工序</view>
+      <input name='remark' type="text" placeholder="选择工序" placeholder-class="placeholder" />
+    </view>
+    <view class="input">
+      <view>是否完成</view>
+      <input name='remark' type="text" placeholder="选择工序" placeholder-class="placeholder" />
+    </view>
+    <button class="save-btn" formType="submit">提交</button>
+  </form>
+</view>
+

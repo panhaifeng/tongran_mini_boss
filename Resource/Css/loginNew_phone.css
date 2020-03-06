@@ -1,0 +1,235 @@
+body{
+	margin: 0;
+	background-color: #fff;
+}
+/*登陆界面总容器*/
+.container{
+	min-height: 200px;
+}
+
+body, input, textarea, select, button {
+	font-family: "lucida Grande",Verdana,"Microsoft YaHei";
+}
+
+.content {
+	width: 100%;
+	height: 200px;
+	position: relative;
+	clear: both;
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding: 10px 10px 10px 10px;
+}
+
+.mainInner{
+	width: 98%;
+	min-height: 200px;
+	padding-top: 10px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.login_title{
+	line-height: 30px;
+	margin-top: 15px;
+	padding-bottom: 10px;
+	font-size: 24px;
+	font-weight: normal;
+	color: #6f95c8;
+}
+
+.login_pictures_info{
+	margin-top: 6px;
+	font-size: 12px;
+}
+
+.rightBox{
+	margin: 0 auto;
+	border: 1px solid #a0b1c4;
+	background-color: #fff;
+	position: relative;
+	z-index: 12;
+	padding: 0;
+	border-radius: 5px;
+	overflow: hidden;
+	width: 90%;
+	max-width: 360px;
+	height: 374px; 
+	visibility: visible;
+}
+
+a {
+	color: #225592;
+	text-decoration: none;
+}
+
+.header_login{
+	width: 100%;
+	overflow: hidden;
+	height: 50px;
+	border-bottom: 1px solid #c0cdd9;
+	background-color: #f9fbfe;
+	clear: both;
+	line-height: 50px;
+	color: #999;
+	position: relative;
+}
+
+.header_login .active{
+	color:#000;
+}
+
+
+
+.login_btn{
+	float: left;
+	cursor: pointer;
+}
+
+.input{
+	background: none;
+	width: 250px;
+	text-align: center;
+	margin: 36px auto;
+}
+
+.showPlaceholder .placeholder {
+	visibility: visible;
+	cursor: text;
+}
+.placeholder {
+	color: #C9C9C9;
+	font-size: 14px;
+	position: absolute;
+	left: 30px;
+	top: 14px;
+	line-height: 14px;
+	visibility: hidden;
+	background: none;
+}
+
+.col-6{
+	width: 50%;
+}
+
+.col-3{
+	width: 33%;
+}
+
+.col-12{
+	width: 100%;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.inputOuter{
+	height:40px;
+	border: 0px solid #96A5B4;
+	background-color:#FFF;
+	width: 100%;
+}
+
+.uinArea,.pwdArea,.verifyArea{
+	height: 50px;
+	position: relative;
+	z-index: 10;
+}
+.inputstyle{
+		top: 0px;
+		padding: 10px 12px 10px 12px;
+		left: 0px;
+		border-radius: 3px;
+		width: 90%;
+		margin-top:3px;
+		background-color:#FFF;
+		font-family:'微软雅黑'; 
+		font-size:18px;
+		border: 1px solid #96A5B4;
+		outline: 0px;
+		border-radius: 3px;
+}
+
+.inputstyle_focus{ 
+	border:1px solid #4892e7;
+	outline: 0;
+}
+.inputstyle:focus{ 
+	border:1px solid #4892e7;
+	outline: 0;
+}
+
+
+.input_tips{
+	/*display: none;*/
+	position: absolute;
+	top: 17px;
+	left: 13px;
+	font-size: 18px;
+	line-height: 16px;
+	color: #aaa;
+	cursor: text;
+}
+
+#submit{
+	height:47px; 
+	width: 100%;
+	line-height:47px; 
+	border-radius:2px;
+	margin-top:20px;  
+	background-color:#5A98DE;
+	font-family:'微软雅黑'; 
+	border:none; 
+	font-size:15px; 
+	cursor:pointer; 
+	text-align:center; 
+	color:#FFF; 
+	position:relative; 
+	z-index:1;
+}
+
+.login_text{
+	font-size: 13px;
+}
+.br_20{
+	height: 20px;
+}
+.input_hide{
+	display: none;
+}
+.input_block{
+	display: block;
+}
+
+#divError {
+	/*width:100px; */
+	position:absolute;
+	height: 30px;
+	width: 242px;
+	float:left;
+	font-size: 13px;
+	line-height: 30px;
+	left: 20px;
+	/*overflow: hidden;	*/
+	white-space: nowrap;
+	background: none repeat scroll 0 0 #fff;
+	color : red;/*#E4625B;*/
+	font-weight:bold;
+	text-align:left;
+	/*border:1px solid #E4625B;*/
+	margin-top:5px;
+	display:none;
+	padding:0px 14px 0px 14px;
+	border-radius: 2px;
+	z-index:2000000;
+}
+.footer{
+	margin: 0 auto;
+	color:#888;
+	margin-top:10px;
+	width: 90%;
+	max-width: 360px;
+	visibility: visible;
+}

@@ -1,0 +1,50 @@
+
+done:
+1,接口的定义直接在config.json中声明即可,注意，声明接口时务必将params一并声明，方便编程时查询和测试方法使用
+调用时传递给接口的参数必须如下格式：
+array(
+    'method'=>'xxx',
+    'params'=>array('a'=>'aa','b'=>'bb')
+)
+2,crud失败均抛出异常，而不会中断程序的执行，
+3，注意php.ini的error_reporting必须设置为error才正常。
+4，flea的改进，改进在error_reporting=E_ALL | E_STRICT时的一些报错问题
+php5.3以后php.ini中增加了一个session.auto_start选项，如果开启，在执行session_statr时就会报notice问题（error_reporting不是error的前提下)
+所以改进方法是将flea.php的904行改为：
+if (FLEA::getAppInf('autoSessionStart') && !session_id()) {
+            session_start();
+        }
+5,新增了dump2file函数,在模拟http请求的代码中，调试很麻烦，可以使用这个函数将调试结果dump到项目根目录的debug_log.txt中进行查看。
+6,直接访问apitest.php，列出所有的api,点击进行测试，根据接口的params声明，自动显示待输入的参数，并模拟post提交
+7,写入日志
+
+todo list:
+2，在日志浏览界面可以重新发送
+4,改进了flea后，去掉了 = 的函数调用方式,在老的套件环境下的测试,确保无误.
+5,为了提高api的相应速度，通过缓存机制避免每次都对json文件进行decode,可考虑将decode后的结果序列化后保存在缓存中(数据库或者文件),每次reponse时 ，判断缓存创建的时间是否大于json的修改时间，如果json文件最近修改过，说明需要更新缓存,否则直接从缓存中反序列化api列表即可。
+参考以下代码：
+function load_yaml($filename, $cacheEnabled = true, $replace = null)
+{
+    static $objects = array();
+
+    if (!file_exists($filename)) {
+        FLEA::loadClass('FLEA_Exception_ExpectedFile');
+        return __THROW(new FLEA_Exception_ExpectedFile($filename));
+    }
+    
+    if ($cacheEnabled) {
+        $arr = FLEA::getCache('yaml-' . $filename, filemtime($filename), false);
+        if ($arr) { return $arr; }
+    }
+
+    if (!isset($objects[0])) {
+        require_once FLEA_3RD_DIR . '/Spyc/spyc.php';
+        $objects[0] = new Spyc();
+    }
+    
+    $arr = $objects[0]->load($filename, $replace);
+    if ($cacheEnabled) {
+        FLEA::writeCache('yaml-' . $filename, $arr);
+    }
+    return $arr;
+}

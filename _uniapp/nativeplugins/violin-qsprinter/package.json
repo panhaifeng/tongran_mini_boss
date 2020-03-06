@@ -1,0 +1,23 @@
+{  
+    "name": "qsprinter",  
+    "id": "violin-qsprinter",  
+    "version": "1.0.0",  
+    "description": "群索PDA打印插件",  
+    "_dp_type":"nativeplugin",
+	"abis": [  
+		"armeabi-v7a"
+	],
+    "_dp_nativeplugin":{
+        "android": {
+            "plugins": [
+                {  
+                    "type": "module",
+                    "name": "violin-qsprinter",  
+                    "class": "cn.liumingmao.violin_qsprinter.QsPrinterWXModule"  
+                }  
+            ],
+            "integrateType": "aar",
+            "minSdkVersion": "22"
+        }  
+    }  
+} 

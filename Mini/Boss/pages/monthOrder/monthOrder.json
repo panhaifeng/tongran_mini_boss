@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ec-canvas": "../../component/ec-canvas/ec-canvas"
+  },
+  "navigationBarTitleText": "合同汇总-月度"
+}

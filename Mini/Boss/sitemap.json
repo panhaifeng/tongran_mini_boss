@@ -1,0 +1,7 @@
+{
+  "desc": "易奇筒染",
+  "rules": [{
+  "action": "allow",
+  "page": "*"
+  }]
+}

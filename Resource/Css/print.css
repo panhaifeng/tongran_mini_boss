@@ -1,0 +1,30 @@
+body {
+Crollbar-Face-color:#6699CC;
+Scrollbar-Highlight-Color:#6699CC;
+Scrollbar-Shadow-Color:#6699CC;
+Scrollbar-3Dlight-Color:#6699CC;
+Scrollbar-Arrow-Color:#6699CC;
+Scrollbar-Track-Color:#6699CC;
+Scrollbar-Darkshadow-Color:#6699CC;
+}
+td {FONT-FAMILY:"宋体,Arial";FONT-SIZE:16px;COLOR:#000;}
+.caption {font-size:28px; font-weight:bold;}
+
+.tableHaveBorder{
+	border-top:1px solid #000;
+	border-left:1px solid #000;
+	border-collapse:collapse;
+	width:100%;
+}
+.tableHaveBorder2{
+    border-top:0px solid #000;
+    border-left:1px solid #000;
+    border-collapse:collapse;
+    width:100%;
+}
+.tableHaveBorder td {
+	border-bottom:1px solid #000;
+	border-right:1px solid #000;
+}
+
+#buttonPrint{height:30px; padding-left:15px; padding-right:15px;}

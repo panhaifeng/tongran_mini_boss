@@ -1,0 +1,35 @@
+<view class="page page1">
+    <view class="page__hd">
+        <view class="page__title">
+          <text class="iconfont icon-mine ibg"></text>
+          <view class="userName">{{project.userName}}</view>
+        </view>
+        <view class='hr-o'></view>  
+        <view class="page__title page__title_comp">
+          <view class="compName">{{project.compName}}</view>
+        </view>
+    </view>    
+</view>
+
+<view class="page page2">
+  <view class="weui-cells__title"></view>
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+        <navigator url="/pages/callme/index" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">联系我们</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+    </view>
+    <view class="weui-cells__title"></view>
+    <view class="weui-cells weui-cells_after-title">
+        <navigator url="/pages/bindProject/bindProject" class="weui-cell" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">项目绑定</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <view class="weui-cell" bindtap="noTitlemodalTap">
+            <view class="weui-cell__bd">解除绑定</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+    </view>
+  </view>
+</view>

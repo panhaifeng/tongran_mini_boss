@@ -1,0 +1,62 @@
+<view class="search-bd">
+  <view class="weui-flex">
+    <view class="weui-flex__item">
+      <view class="picker-view">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{yearList}}">
+          <view class="weui-input">年：{{yearList[index]}} <text class="iconfont icon-unfold"></text></view>
+        </picker>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="container-mychart">
+  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+</view>
+
+<view class="page__bd page__bd_spacing">
+  <view class="weui-cells__title">详细列表</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell" wx:for="{{orderDataList}}">
+      <view class="weui-flex">
+          <view class="weui-flex__item"><view class="placeholder font-b">
+            <text wx:if="{{item.month}}">{{item.month}}</text>
+            <text wx:else>{{item.textField}}</text>
+          </view></view>
+      </view>
+      <view class="weui-flex" >
+          <view class="weui-flex__item">
+          <view class="placeholder">
+            <view class="weui-badge badge-default" style="margin-left: 5px;">大货</view>
+              {{item.dhCntM}} M
+            </view>
+          </view>
+          <view class="weui-flex__item"><view class="placeholder">{{item.dhMoney}} RMB</view></view>
+      </view>
+      <view class="weui-flex">
+          <view class="weui-flex__item">
+              <view class="placeholder">
+                <view class="weui-badge badge-default" style="margin-left: 5px;">大样</view>
+                {{item.dyCntM}} M
+              </view>
+            </view>
+          <view class="weui-flex__item"><view class="placeholder">{{item.dyMoney}} RMB</view></view>
+      </view>
+      <view class="weui-flex">
+          <view class="weui-flex__item"><view class="placeholder">
+            <view class="weui-badge" style="margin-left: 5px;">
+              <text wx:if="{{item.type == 'sum'}}">总计</text>
+              <text wx:else>小计</text>
+            </view> 
+              {{item.sum}} RMB
+            </view>
+          </view>
+      </view>
+    </view>
+        
+  </view>
+ </view>
+
+
+
+

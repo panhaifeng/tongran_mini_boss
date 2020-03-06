@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bindProject/bindProject",
+    "pages/monthOrder/monthOrder",
+    "pages/orderClient/index",
+    "pages/orderTrader/index",
+    "pages/user/index",
+    "pages/callme/index",
+    "pages/outPut/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#278296",
+    "navigationBarTitleText": "易奇筒染",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#278296",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/shouye.png",
+        "selectedIconPath": "image/shouye_HL.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "image/icon_signal.png",
+        "selectedIconPath": "image/icon_signal_HL.png",
+        "text": "我"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

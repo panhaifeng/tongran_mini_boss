@@ -1,0 +1,138 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+/*登陆界面总容器*/
+/*.container{
+    min-height: 500px;
+}*/
+
+body, input, textarea, select, button {
+    font-family: "lucida Grande",Verdana,"Microsoft YaHei";
+}
+#prompt{
+    overflow: hidden;
+    display:none;
+    z-index: 999;
+    margin-top: -273px;
+}
+#aRefresh{
+    cursor: pointer;
+}
+.qrcodeBox{
+    border: 1px solid #a0b1c4;
+    background-color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    z-index: 12;
+    padding: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 334px;
+    height: auto;
+    visibility: visible;
+    padding-bottom: 20px;
+}
+
+a {
+    color:#1d5494;
+    text-decoration: none;
+}
+a:hover{
+    color:#551A8B;
+}
+
+.header{
+    height: 62px;
+    overflow: hidden;
+    zoom: 1;
+}
+.header .logo{
+    min-width: 365px;
+    min-height: 30px;
+    _display: inline;
+    /*background-image:url(../image/logo.png);*/
+    /*_background-image: url(Resource/Image/LoginNew/loginLogo.png);*/
+    float: left;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 365px 30px;
+    margin-left: 2.5em;
+    margin-top: 1.2em;
+    text-indent: -9999em;
+}
+
+.header .link{
+    padding-right: 40px;
+    margin-top: 16px;
+    float: right;
+    line-height: 30px;
+    font-size: 14px;
+}
+.foot{
+    float: right;
+    position: absolute;
+    z-index: 999;
+    color: #fff;
+    top: 90%;
+    left: 75%;
+    font-size: 13px;
+}
+
+.header .link span{
+    color: #1d5494;
+}
+
+.input{
+    background: none;
+    width: 280px;
+    text-align: center;
+    margin: 36px auto;
+}
+
+.col-6{
+    width: 50%;
+}
+
+.col-3{
+    width: 33%;
+}
+
+.col-12{
+    width: 100%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+.rollboder {
+    BORDER: #bcbcbc 1px solid;
+    position: absolute;
+    bottom: 37px;
+    right: 0px;
+    background: rgba(255, 255, 255, 0.5);
+}
+.rollleft {
+    FLOAT: left;
+    WIDTH: 400px;
+}
+.rollleft STRONG {
+    COLOR: #10377F;
+}
+.rollcenter {
+    BORDER-RIGHT: #bcbcbc 1px solid;
+    BORDER-LEFT: #bcbcbc 1px solid;
+    WIDTH: 30px; TEXT-ALIGN: center;
+}
+.rollright {
+    FLOAT: right;
+    WIDTH: 40px;
+    TEXT-ALIGN: center;
+}
+.rollright IMG {
+    VERTICAL-ALIGN: middle;
+}

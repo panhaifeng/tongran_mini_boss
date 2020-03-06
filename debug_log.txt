@@ -1,0 +1,12 @@
+
+Array
+(
+    [success] => 1
+    [msg] => 请求成功
+    [code] => 0
+    [params] => Array
+        (
+            [money_month] => 3
+        )
+
+)

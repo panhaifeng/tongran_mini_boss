@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="page page1">
+ 
+    <view class="page__bd">
+        <view class="weui-grids">
+            <block wx:for="{{indexData}}" wx:key="text">
+                <navigator url="" class="weui-grid">
+                    <view class="weui-grid__label">{{item.text}}</view>
+                    <view class="weui-grid__label">{{item.number}}</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>
+<view wx:if="{{message}}" class="tip-msg">{{message}}</view>
+<view class="page page2">    
+    <view class="page__bd">
+        <view class="weui-grids">
+            <block wx:for="{{apps}}" wx:key="text">
+                <navigator url="{{item.path}}" class="weui-grid" hover-class="weui-grid_active">
+                    <text class="iconfont {{item.icon}}"></text>
+                    <view class="weui-grid__label">{{item.text}}</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>
